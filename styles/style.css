@@ -135,7 +135,7 @@
 .two-columns__paragraph {
   width: 100%;
   min-width: 784px;
-  line-height: 34px; 
+  line-height: 34px;
   font-size: 24px;
   font-weight: normal;
   margin-top: 0;
@@ -149,7 +149,7 @@
 
 .span-accent {
   font-weight: bold;
-  line-height: 34px; 
+  line-height: 34px;
   font-size: 24px;
 }
   
@@ -232,11 +232,11 @@
   margin-top: 100px;
   border-top: 2px solid #b6b6b6; /* уточнить цвет и толщину рамки */
   border-bottom: 2px solid #b6b6b6; /* уточнить цвет и толщину рамки */
-  background-image: url("../images/feynman.png"); 
+  background-image: url("../images/feynman.png");
   background-size: 837px 637px;
   background-repeat:no-repeat;
-  background-position: left bottom; 
-  background-color: #f2f2f2;;
+  background-position: left bottom;
+  background-color: #f2f2f2;
 }
 
 .feynman__title {
