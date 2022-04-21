@@ -7,7 +7,7 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  border: 2px solid #b6b6b6; /* уточнить цвет и толщину рамки */
+  /* border: 2px solid #b6b6b6; */  /* уточнить цвет и толщину рамки */
 }
 
 /* Шапка header */
@@ -20,8 +20,9 @@
   display: flex;
   align-items: center;
   position: relative;
-  border-bottom: 2px solid #b6b6b6; /* уточнить цвет и толщину рамки */
+  /* border-bottom: 2px solid #b6b6b6; */  /* уточнить цвет и толщину рамки */
   background-color: #f2f2f2;
+  z-index: 1;
 }
 
 .logo {
@@ -34,22 +35,22 @@
   position: absolute;
   top: 30px;
   left: 64px;
-  z-index: 3;
+  z-index: 2;
 }
 
 .header__title {
-  width: 730px;
-  position: absolute;
-  left: 64px;
+  margin: 0 0 0 64px;
+  max-width: 730px;
+  width: 100%;
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
-  z-index: 3;
   /* border: 1px solid rgb(113, 0, 128); */
 }
 
 .header__subtitle {
-  width: 388px;
+  max-width: 388px;
+  width: 100%;
   position: absolute;
   left: 64px;
   bottom: 30px;
@@ -57,7 +58,6 @@
   font-size: 18px;
   font-weight: normal;
   margin: 0;
-  z-index: 3;
   /* border: 1px solid orange; */
 }
 
@@ -66,13 +66,20 @@
   color: #2f80ed;
 }
 
+.header__link:hover {
+  color: green;
+}
+
 .header__main-illustration {
   height: 608px;
   width: 765px;
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  object-fit: contain;
+  object-position: right;
+  z-index: -1;
+  /*  border: 1px solid orange; */
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -82,7 +89,7 @@
   position: absolute;
   right: 0;
   top: 64px;
-  z-index: 1;
+  z-index: -2;
   background-color: #2f80ed; 
 }
 
@@ -94,8 +101,8 @@
   justify-content: center;
   align-items: flex-start;
   margin-top: 100px;
-  border-top: 2px solid #b6b6b6;  /* уточнить цвет и толщину рамки */
-  border-bottom: 2px solid #b6b6b6; /* уточнить цвет и толщину рамки */
+  /* border-top: 2px solid #b6b6b6;  */ /* уточнить цвет и толщину рамки */
+  /* border-bottom: 2px solid #b6b6b6; */ /* уточнить цвет и толщину рамки */
   /* border: 2px solid red; */
 }
 
@@ -105,19 +112,18 @@
   width: 80%;
   margin: 0;
   justify-content: space-between;
-  flex-wrap: wrap;
-  list-style: none;
   /* border: 2px solid pink; */
 }
 
 .two-columns__brief {
-  width: 175px;
+  max-width: 175px;
+  width: 100%;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
   color: #2f80ed;
   margin: 0;
-  /* border: 2px solid pink; */
+  /*  border: 2px solid pink; */
 }
 
 .two-columns__main-text {
@@ -147,7 +153,7 @@
   margin-bottom: 0;
 }
 
-.span-accent {
+.two-columns__span-accent {
   font-weight: bold;
   line-height: 34px;
   font-size: 24px;
@@ -161,11 +167,11 @@
   align-items: center;
   padding: 0;
   margin-top: 100px;
-  border-top: 2px solid #b6b6b6;  /* уточнить цвет и толщину рамки */
-  border-bottom: 2px solid #b6b6b6; /* уточнить цвет и толщину рамки */
+  /* border-top: 2px solid #b6b6b6;  */ /* уточнить цвет и толщину рамки */
+  /* border-bottom: 2px solid #b6b6b6; */ /* уточнить цвет и толщину рамки */
 }
 
-.title {
+.section-title {
   width: 60%;
   text-align: center;
   line-height: 1.15;
@@ -175,7 +181,7 @@
   /* border: 2px solid pink; */
 }
 
-.subtitle {
+.section-subtitle {
   width: 60%;
   text-align: center;
   line-height: 34px;
@@ -185,24 +191,22 @@
   /* border: 2px solid pink; */
 }
 
-.digits__table {
-  flex-direction: column;
+.table {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   width: 1100px;  
   /* border: 2px solid green; */
 }
 
-.table__row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .table__cell {
   width: 250px;
+  margin-right: 0;
   margin-top: 60px;
-  padding: 0;
-  /* border: 2px solid rgb(2, 36, 2); */
+  /* border: 2px solid yellow; */
 }
 
 .table__heading {
@@ -224,14 +228,14 @@
 /* Основной раздел блок feynman */
 
 .feynman {
-  height: 890px;
+  min-height: 890px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   margin-top: 100px;
-  border-top: 2px solid #b6b6b6; /* уточнить цвет и толщину рамки */
-  border-bottom: 2px solid #b6b6b6; /* уточнить цвет и толщину рамки */
+  /* border-top: 2px solid #b6b6b6; */ /* уточнить цвет и толщину рамки */
+  /* border-bottom: 2px solid #b6b6b6; */ /* уточнить цвет и толщину рамки */
   background-image: url("../images/feynman.png");
   background-size: 837px 637px;
   background-repeat:no-repeat;
@@ -240,7 +244,8 @@
 }
 
 .feynman__title {
-  width: 648px;
+  max-width: 648px;
+  width: 100%;
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
@@ -269,6 +274,10 @@
   /* border: 1px solid pink; */
 }
 
+.feynman__link:hover {
+  color: green;
+}
+
 /* Основной раздел Кауфман */
 
 .kaufman {
@@ -278,35 +287,24 @@
   position: relative;
   align-items: center;
   padding: 90px 0;
-  background-color: black;
-  border-bottom: 2px solid #b6b6b6; /* уточнить цвет и толщину рамки */
+  background-color: #1f1f1f;
+  z-index: 1;
+  /* border-bottom: 2px solid #b6b6b6; */ /* уточнить цвет и толщину рамки */
 }
 
-.title_theme_dark {
+.section-title_theme_dark {
   color: white;
-  z-index: 2;
   /*  border: 2px solid pink; */
 }
 
-.subtitle_theme_dark {
+.section-subtitle_theme_dark {
   color: white;
-  margin: 20px 0 0;
-  /* border: 2px solid pink; */
+   /* border: 2px solid pink; */
 }
 
-.kaufman__table_theme_dark {
-  flex-direction: column;
-  display: flex;
-  width: 1100px;
-  z-index: 1;
-  /* border: 2px solid green; */
-}
-
-.table__row_theme_dark {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.table_theme_dark {
   
+  /* border: 2px solid green; */
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -319,28 +317,27 @@
 }
 
 .table__heading_theme_dark {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: bold;
-  /* border: 1px solid pink; */
+  
+ /*  border: 1px solid pink; */
 }
 
 .table__text_theme_dark {
-  margin: 20px 0 0;
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
-  /* border: 1px solid pink; */
+  
+  /* border: 1px solid pink;  */
 }
 
 .kaufman__triangle {
   width: 877px;
-  height: 887px;
+  height: 877px;
   position: absolute;
   top: 0;
   right: -210px;
-  z-index: 0;
+  padding: 0;
+  background-image: url("../images/kaufman-triangle.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  /*  border: 1px solid red; */
 }
 
 /* Подвал footer */
@@ -351,11 +348,11 @@
   justify-content: center;
   position: relative;
   color: white;
-  border-bottom: 2px solid #b6b6b6; /* уточнить цвет и толщину рамки */
-  background-color: black;
+  /* border-bottom: 2px solid #b6b6b6; */ /* уточнить цвет и толщину рамки */
+  background-color: #1f1f1f;
 }
 
-.columns {
+.footer__columns {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -364,7 +361,7 @@
   /* border: 1px solid red; */
 }
 
-.column_copyright {
+.footer__column_content_copyright {
   display: flex;
   flex-basis: 711px;
   flex-direction: column;
@@ -377,35 +374,42 @@
   /* border: 1px solid green; */
 }
 
-.author {
+.footer__author {
   margin: 18px 0;
   line-height: 25px;
   font-size: 18px;
   /* border: 1px solid green; */
 }
 
-.column_links {
+.footer__column_links {
   list-style: none;
   margin: 20px 0 16px;
   padding: 0;
   /* border: 1px solid blue; */
 }
 
-.column_heading {
+.footer__column_heading {
+  margin: 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
+  /* border: 1px solid pink; */
 }
 
-.column_link {
+.footer__column_link {
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   text-decoration: none;
   color: white;
+  /*  border: 1px solid pink; */
 }
 
-.social-icon {
+.footer__column_link:hover {
+  color: green;
+}
+
+.footer__social-icon {
   margin-right: 10px;
   width: 16px;
   height: 16px;
