@@ -1,0 +1,8 @@
+.two-columns {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0;
+    justify-content: space-between;
+    /* border: 2px solid pink; */
+  }

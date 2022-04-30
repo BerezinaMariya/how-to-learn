@@ -1,0 +1,10 @@
+.techniques {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    padding-top: 100px;
+    margin: 0 auto;
+    align-items: center;
+    /* border: 1px solid palevioletred; */
+}

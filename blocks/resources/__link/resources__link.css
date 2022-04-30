@@ -1,0 +1,11 @@
+.resources__link {
+    height: 38px;
+    width: 270px;
+    /* border: 1px solid rgb(128, 0, 117); */
+  }
+
+.resources__link:hover {
+    opacity: 0.5;
+    transition: opacity 1s ease;
+    color: green;
+  }

@@ -1,0 +1,16 @@
+/* Основной раздел блок feynman */
+.feynman {
+    min-height: 790px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    padding-top: 100px;
+    background-image: url("../../images/feynman.png");
+    background-size: 837px 637px;
+    background-repeat:no-repeat;
+    background-position: left bottom;
+    background-color: #f2f2f2;
+    /* border: 2px solid red; */
+  }

@@ -1,0 +1,8 @@
+/* Основной раздел блок digits */
+.digits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    /* border: 2px solid red; */
+  }

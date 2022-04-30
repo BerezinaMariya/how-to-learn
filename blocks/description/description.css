@@ -1,0 +1,8 @@
+.description {
+    display: flex;
+    min-height: 330px;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px;
+    /* border: 2px solid red; */
+  }
