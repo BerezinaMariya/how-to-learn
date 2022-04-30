@@ -1,6 +1,6 @@
 .video__iframe {
     width: 515px;
     height: 316px;
+    border: 0;
     /* box-sizing: border-box;
     border: 1px solid purple; */
-}
