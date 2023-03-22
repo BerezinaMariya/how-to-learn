@@ -12,4 +12,4 @@
 ### Планы по доработке проекта
 Замена контейнеров, созданных при помощи Flexbox, на контейнеры Grid Layout.
 
-Ссылка на проект на GitHub Pages: https://berezinamariya.github.io/how-to-learn/
+#### Ссылка на проект на GitHub Pages: https://berezinamariya.github.io/how-to-learn/
